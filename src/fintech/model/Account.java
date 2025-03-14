@@ -1,40 +1,35 @@
-package fintech.model;
+package fintech.model; 
 
 /**
  * @author 12S23041 - Lisbeth Panjaitan
  * @author 12S23021 - Eunike Purba
  */
-public class Account{
+public class Account {
+  private String owner;
+  private String accountName;
+  private double balance =0.0;
 
-    private final String owner;
-    private final String name;
-    private double balance = 0.0;
-
-    public Account(String _owner, String _name)
-    {
-      this.owner = _owner;
-      this.name = _name;
-    }
-
-
-    public String getName()
-    {
-      return name;
-    }
-
-    public String getOwner()
-    {
-      return owner;
-    }
-
-    public double getBalance()
-    {
-      return balance;
-    }
-
-    @Override
-    public String toString()
-    {
-      return this.owner + "|" + this.name + "|" + this.balance;
-    }
+  public Account(String owner, String accountName) {
+    this.owner = owner;
+    this.accountName = accountName;
+    this.balance = 0.0;
   }
+
+  public String getOwner() {
+    return this.owner;
+  }
+
+  public String getAccountName() {
+    return this.accountName;
+  }
+
+  public double getBalance() {
+    return this.balance;
+  }
+
+  public void addBalance(double amount) {
+    this.balance += amount;
+  }
+
+    }
+  
